@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../pages/main";
+import Main from "../pages/Main";
 import Home from "../pages/Home";
 import AdminDashboard from "../pages/Dashboard";
 import Login from "../components/Login";
@@ -8,7 +8,7 @@ import ProtectedRoute from "./ProtectedRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <Main></Main>,
     children: [
       {
         path: "/",
