@@ -46,12 +46,12 @@ const Footer = () => {
   const { quickLinks, socialLinks, contact } = footerData;
 
   return (
-    <footer className="bg-gray-900 text-gray-200 py-10 px-6 md:px-20">
+    <footer className="bg-gray-900 text-gray-200 py-10  px-6 md:px-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         <div>
           <a href="/">
             <img
-              className="w-[130px] md:w-[300px] h-[70px] object-cover mb-4 items-start -ml-10"
+              className="w-[150px] md:w-[300px] h-[70px] object-cover mb-4 items-start -ml-4 md:-ml-10"
               src={logo}
               alt=""
             />

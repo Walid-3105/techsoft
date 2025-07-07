@@ -53,7 +53,7 @@ const SliderPanel = () => {
   };
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 -z-10">
       <h2 className="text-xl font-bold mb-2">Slider Panel</h2>
       <form onSubmit={handleSliderUpload}>
         <input
