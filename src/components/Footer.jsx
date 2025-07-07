@@ -56,7 +56,7 @@ const Footer = () => {
               alt=""
             />
           </a>
-          <div className="text-base">
+          <div className="text-base [word-spacing:0.2em] leading-relaxed">
             রঙিলা টিভি একটি আধুনিক ডিজিটাল প্ল্যাটফর্ম, যেখানে আপনি যেকোনো সময়,
             যেকোনো স্থান থেকে সরাসরি টিভি চ্যানেল দেখতে পারবেন। আমাদের লক্ষ্য
             হলো দেশি ও আন্তর্জাতিক মানের বিনোদন সহজে ও ঝামেলাহীনভাবে আপনার হাতের
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-4">Live TV App Link</h3>
+          <h3 className="text-lg font-semibold mb-4 pl-2">Live TV App Link</h3>
           <ul className="space-y-2 text-sm">
             {quickLinks.map((link, i) => (
               <li key={i} className="">
