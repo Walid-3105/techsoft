@@ -4,7 +4,7 @@ import footer2 from "../assets/footer2.png";
 import logo from "../assets/logo.png";
 import {
   FaFacebookF,
-  FaTwitter,
+  FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -13,7 +13,7 @@ import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 const iconMap = {
   facebook: FaFacebookF,
-  twitter: FaTwitter,
+  youtube: FaYoutube,
 };
 
 const Footer = () => {
@@ -65,7 +65,7 @@ const Footer = () => {
             <br />
             আমাদের অ্যাপে রয়েছে:
             <ul className="">
-              <li>✅ ১০০+ লাইভ টিভি চ্যানেল</li>
+              <li>✅ ১০০০+ লাইভ টিভি চ্যানেল</li>
               <li>✅ এক্সক্লুসিভ মুভি ও ওয়েব সিরিজ </li>
               <li>✅ উন্নতমানের ভিডিও স্ট্রিমিং সুবিধা</li>
               <li>✅ ইউজার ফ্রেন্ডলি ইন্টারফেস</li>
