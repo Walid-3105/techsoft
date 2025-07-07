@@ -63,11 +63,14 @@ const Channel = () => {
           {!collapsed[category] && (
             <div className="p-4 flex flex-wrap gap-4">
               {channels[category].map((channel) => (
-                <div key={channel._id} className="w-[120px] text-center">
+                <div
+                  key={channel._id}
+                  className="w-[173px] h-[175px] text-center border rounded-md border-blue-400"
+                >
                   <img
                     src={channel.imageUrl}
                     alt={channel.name || "No Name"}
-                    className="w-full h-20 object-cover rounded-md mb-1"
+                    className="w-full h-full object-cover rounded-md mb-1"
                   />
                 </div>
               ))}
