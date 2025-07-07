@@ -56,7 +56,7 @@ const Footer = () => {
               alt=""
             />
           </a>
-          <div className="text-base [word-spacing:0.2em] leading-relaxed">
+          <div className="text-base [word-spacing:0.3em] leading-relaxed">
             রঙিলা টিভি একটি আধুনিক ডিজিটাল প্ল্যাটফর্ম, যেখানে আপনি যেকোনো সময়,
             যেকোনো স্থান থেকে সরাসরি টিভি চ্যানেল দেখতে পারবেন। আমাদের লক্ষ্য
             হলো দেশি ও আন্তর্জাতিক মানের বিনোদন সহজে ও ঝামেলাহীনভাবে আপনার হাতের
