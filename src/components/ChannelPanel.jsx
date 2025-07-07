@@ -24,7 +24,7 @@ const ChannelPanel = () => {
   const fetchChannels = async () => {
     try {
       const res = await axios.get(
-        "https://techsoft-server.onrender.com/api/channels"
+        "https://news-server-lyart.vercel.app/api/channels"
       );
       setChannels(res.data);
     } catch {
@@ -72,7 +72,7 @@ const ChannelPanel = () => {
 
     try {
       await axios.post(
-        "https://techsoft-server.onrender.com/api/channels",
+        "https://news-server-lyart.vercel.app/api/channels",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -92,7 +92,7 @@ const ChannelPanel = () => {
   const handleDeleteChannel = async (id) => {
     try {
       await axios.delete(
-        `https://techsoft-server.onrender.com/api/channels/${id}`
+        `https://news-server-lyart.vercel.app/api/channels/${id}`
       );
       setChannels((prev) => prev.filter((ch) => ch._id !== id));
       toast.success("Channel deleted");
@@ -181,7 +181,7 @@ const ChannelPanel = () => {
             className="flex items-center gap-4 p-3 border rounded shadow-sm"
           >
             <img
-              src={`https://techsoft-server.onrender.com${ch.imageUrl}`}
+              src={ch.imageUrl}
               alt="channel"
               className="w-20 h-20 object-cover rounded"
             />

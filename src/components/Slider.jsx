@@ -10,7 +10,7 @@ const Slider = () => {
 
   useEffect(() => {
     axios
-      .get("https://techsoft-server.onrender.com/api/sliders")
+      .get("https://news-server-lyart.vercel.app/api/sliders")
       .then((res) => {
         setSliders(res.data);
         setLoading(false);
@@ -48,7 +48,7 @@ const Slider = () => {
   return (
     <div className="relative text-center  mx-auto">
       <img
-        src={`https://techsoft-server.onrender.com${sliders[currentSlide].imageUrl}`}
+        src={sliders[currentSlide].imageUrl}
         alt={`Slide ${currentSlide}`}
         className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover shadow"
         onError={(e) => console.error(`Failed to load image: ${e.target.src}`)}

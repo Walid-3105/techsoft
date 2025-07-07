@@ -9,7 +9,7 @@ const Channel = () => {
 
   useEffect(() => {
     axios
-      .get("https://techsoft-server.onrender.com/api/channels")
+      .get("https://news-server-lyart.vercel.app/api/channels")
       .then((res) => {
         const grouped = res.data.reduce((acc, channel) => {
           const category = channel.category || "Uncategorized";
@@ -65,7 +65,7 @@ const Channel = () => {
               {channels[category].map((channel) => (
                 <div key={channel._id} className="w-[120px] text-center">
                   <img
-                    src={`https://techsoft-server.onrender.com${channel.imageUrl}`}
+                    src={channel.imageUrl}
                     alt={channel.name || "No Name"}
                     className="w-full h-20 object-cover rounded-md mb-1"
                   />

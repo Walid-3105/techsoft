@@ -72,7 +72,7 @@ const SliderPanel = () => {
         {sliders.map((slider) => (
           <div key={slider._id} className="flex items-center gap-4 mb-2">
             <img
-              src={`https://techsoft-server.onrender.com${slider.imageUrl}`}
+              src={slider.imageUrl}
               alt="slider"
               className="w-20 h-20 object-cover rounded"
             />
