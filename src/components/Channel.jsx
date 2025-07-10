@@ -51,13 +51,15 @@ const Channel = () => {
   return (
     <div className="w-full  mx-auto p-5">
       {Object.keys(channels).map((category) => (
-        <div key={category} className="mb-5 border border-gray-300 rounded-lg">
+        <div key={category} className="mb-5 border border-green-500 rounded-lg">
           <div
             onClick={() => toggleCollapse(category)}
-            className="flex justify-between items-center bg-gray-200 p-4 cursor-pointer rounded-t-lg select-none"
+            className="flex justify-between items-center p-3 cursor-pointer rounded-t-lg select-none border-b border-green-200 rounded-lg"
           >
-            <h3 className="text-lg font-semibold m-0">{category}</h3>
-            <span className="text-xl">{collapsed[category] ? "▼" : "▲"}</span>
+            <h3 className="text-lg text-green-600 font-bold m-0">{category}</h3>
+            <span className="text-xl text-green-600">
+              {collapsed[category] ? "▼" : "▲"}
+            </span>
           </div>
 
           {!collapsed[category] && (
@@ -65,12 +67,12 @@ const Channel = () => {
               {channels[category].map((channel) => (
                 <div
                   key={channel._id}
-                  className="w-[173px] h-[175px] text-center border rounded-md border-blue-400"
+                  className="w-[173px] h-[175px] text-center border rounded-xl shadow-2xl border-green-500"
                 >
                   <img
                     src={channel.imageUrl}
                     alt={channel.name || "No Name"}
-                    className="w-full h-full object-cover rounded-md mb-1"
+                    className="w-full h-full object-cover rounded-xl mb-1"
                   />
                 </div>
               ))}
