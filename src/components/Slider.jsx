@@ -46,7 +46,7 @@ const Slider = () => {
 
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [nextSlide, sliders.length]);
