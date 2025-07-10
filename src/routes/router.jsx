@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AdminDashboard from "../pages/Dashboard";
 import Login from "../components/Login";
 import ProtectedRoute from "./ProtectedRoute";
+import Register from "../components/Register";
 
 export const router = createBrowserRouter([
   {
@@ -28,8 +29,8 @@ export const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-  // {
-  //   path: "/register",
-  //   element: <Register />,
-  // },
+  {
+    path: "/register",
+    element: <Register />,
+  },
 ]);
