@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -21,32 +21,50 @@ const Slider = () => {
       });
   }, []);
 
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % sliders.length);
+  }, [sliders.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + sliders.length) % sliders.length);
+  }, [sliders.length]);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft") {
-        setCurrentSlide((prev) => (prev - 1 + sliders.length) % sliders.length);
+        prevSlide();
       } else if (e.key === "ArrowRight") {
-        setCurrentSlide((prev) => (prev + 1) % sliders.length);
+        nextSlide();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [sliders.length]);
+  }, [prevSlide, nextSlide]);
 
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % sliders.length);
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + sliders.length) % sliders.length);
+  useEffect(() => {
+    if (sliders.length === 0) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [nextSlide, sliders.length]);
 
   if (loading)
-    return <div className="text-center py-10">Loading sliders...</div>;
+    return (
+      <div className="flex justify-center items-center h-[300px]">
+        <div className="w-12 h-12 border-4 border-green-500 border-dashed rounded-full animate-spin"></div>
+      </div>
+    );
+
   if (error)
     return <div className="text-center py-10 text-red-500">{error}</div>;
   if (sliders.length === 0)
     return <div className="text-center py-10">No sliders available</div>;
 
   return (
-    <div className="relative text-center  mx-auto">
+    <div className="relative text-center mx-auto">
       <img
         src={sliders[currentSlide].imageUrl}
         alt={`Slide ${currentSlide}`}
