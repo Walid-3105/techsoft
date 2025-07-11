@@ -124,7 +124,6 @@ const FooterPanel = () => {
         Update Quick Links
       </button>
 
-      {/* Social Links */}
       <h2 className="text-xl font-bold mt-6 mb-2">Follow Us Links</h2>
       {(footerData.socialLinks || []).map((link) => (
         <div
@@ -144,7 +143,6 @@ const FooterPanel = () => {
         Update Follow Us Links
       </button>
 
-      {/* Contact Info */}
       <h2 className="text-xl font-bold mt-6 mb-2">Contact Info</h2>
       <div className="mb-2">
         <label className="block">Phone:</label>

@@ -21,7 +21,6 @@ const Channel = () => {
       });
   }, []);
 
-  // ✅ useMemo to group channels by category
   const groupedChannels = useMemo(() => {
     const grouped = channelData.reduce((acc, channel) => {
       const category = channel.category || "Uncategorized";
@@ -30,7 +29,6 @@ const Channel = () => {
       return acc;
     }, {});
 
-    // Initialize collapsed state only once
     const initialCollapseState = Object.keys(grouped).reduce((acc, cat) => {
       acc[cat] = true;
       return acc;

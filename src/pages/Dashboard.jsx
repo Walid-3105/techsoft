@@ -10,7 +10,6 @@ const AdminDashboard = () => {
 
   return (
     <div className="md:flex h-screen">
-      {/* Mobile menu toggle */}
       <div className="md:hidden bg-gray-800 text-white flex items-center justify-between px-4 py-3">
         <h2 className="text-xl font-bold">Admin Panel</h2>
         <button
@@ -21,7 +20,6 @@ const AdminDashboard = () => {
         </button>
       </div>
 
-      {/* Sidebar */}
       <aside
         className={`bg-gray-800 text-white w-full md:w-64 p-6 space-y-4 transition-all duration-300 ease-in-out ${
           showSidebar ? "block" : "hidden"
@@ -71,7 +69,6 @@ const AdminDashboard = () => {
         </ul>
       </aside>
 
-      {/* Main content */}
       <main className="flex-1 p-4 md:p-6 bg-gray-100 overflow-y-scroll max-h-full">
         {activePanel === "slider" && (
           <section className="bg-white rounded-xl shadow p-4">

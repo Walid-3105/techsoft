@@ -118,7 +118,6 @@ const ChannelPanel = () => {
           ))}
         </select>
 
-        {/* Add + Delete Category Section */}
         <div className="space-y-2">
           <div className="flex gap-2">
             <input
@@ -173,7 +172,6 @@ const ChannelPanel = () => {
         </button>
       </form>
 
-      {/* Display uploaded channels */}
       <div className="mt-6 space-y-4">
         {channels.map((ch) => (
           <div
